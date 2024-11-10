@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,16 +18,16 @@ const Navbar = () => {
         {/* Desktop menu */}
         <ul className='gap-10 lg:gap-16 hidden md:flex'>
           <li className='menulink'>
-            <a href="/">Home</a>
+            <Link  href="/">Home</Link >
           </li>
           <li className='menulink'>
-            <a href="#about">About</a>
+            <Link  href="#about">About</Link >
           </li>
           <li className='menulink'>
-            <a href="#skills">Skills</a>
+            <Link  href="#skills">Skills</Link >
           </li>
           <li className='menulink'>
-            <a href="#contact">Contact</a>
+            <Link href="#contact">Contact</Link >
           </li>
         </ul>
 
@@ -43,16 +45,16 @@ const Navbar = () => {
       {isMenuOpen && (
         <ul className='flex flex-col gap-4 mt-4 md:hidden'>
           <li>
-            <a href="/" onClick={toggleMenu}>Home</a>
+            <Link href="/" onClick={toggleMenu}>Home</Link>
           </li>
           <li>
-            <a href="#about" onClick={toggleMenu}>About</a>
+            <Link  href="#about" onClick={toggleMenu}>About</Link >
           </li>
           <li>
-            <a href="#skills" onClick={toggleMenu}>Skills</a>
+            <Link  href="#skills" onClick={toggleMenu}>Skills</Link >
           </li>
           <li>
-            <a href="#contact" onClick={toggleMenu}>Contact</a>
+            <Link  href="#contact" onClick={toggleMenu}>Contact</Link >
           </li>
         </ul>
       )}
